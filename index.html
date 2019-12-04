@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Unna&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Unna:700i&display=swap" rel="stylesheet">
+    <link rel="reset" href="css/reset.css">
 
   </head>
   <body>
@@ -32,32 +33,32 @@
               <li><a href="#">Focus</a></li>
             </ul>
           </li>
-          <li><a href="#">Negative</a></li>
+          <li><a href="#">Negative</a>
           <ul>
               <li><a href="#">Anger</a></li>
-              <li><a href="#">Sad</li>
-        </ul>
+              <li><a href="#">Grief</li>
+        </ul></li>
       </nav>
 
       <!-- Search for a product (non-functional) -->
       <form>
-        <label>Search
-          <input type="search" name="find" id="find">
-        </label>
+        <label class="seeyalater" for="find">Search</label>
+        <input type="search" name="find" id="find" placeholder="Search...">
+        
         <button type="button"><span class="material-icons">search</span></button>
       </form>
 
       <!-- Additional nav links -->
 
       <ul>
-        <li><a href="#"><span class="material-icons">favorite_border</span></a></li>
+        <!-- <li><a href="#"><span class="material-icons">favorite_border</span></a></li> -->
         <li><a href="#"><span class="material-icons">shopping_cart</span></a></li>
       </ul>
     </header>
 
     <main>
       <header>
-        <h1>Sale on Positive</h1>
+        <!-- <h1>Sale on Positive</h1> -->
 
         <!-- Filtering product form -->
         <form>
@@ -81,14 +82,34 @@
             </ul>
           </fieldset> -->
           <fieldset>
-            <legend>Sizes</legend>
-            <ol class="ol">
-              <li><input type="checkbox" name="size" value="po" id="po"> <label for="po">P</label></li>
-              <li><input type="checkbox" name="size" value="sm" id="sm"> <label for="sm">S</label></li>
-              <li><input type="checkbox" name="size" value="lg" id="lg"> <label for="lg">L</label></li>
-            </ol>
+            <fieldset>
+                <legend>Sizes</legend>
+                <ul class="options">
+                  <li>
+                    <label class="option">
+                      <input type="radio" name="sizee" value="p" checked> <!-- default -->
+                      <span class="circle">P</span>
+                    </label>
+                  </li>
+              
+                  <li>
+                    <label class="option">
+                      <input type="radio" name="sizee" value="s">
+                      <span class="circle">S</span>
+                    </label>
+                  </li>
+              
+                  <li>
+                    <label class="option">
+                      <input type="radio" name="sizee" value="l"> 
+                      <span class="circle">L</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+              
           </fieldset>
-          <fieldset>
+          <!-- <fieldset>
             <legend>Ratings (above)</legend>
             <ol>
               <li>
@@ -116,15 +137,15 @@
                 </label>
               </li>
             </ol>
-          </fieldset>
+          </fieldset> -->
         </form>
       </header>
 
       <section>
-        <h2>Results</h2>
+
 
         <div class="layout">
-          <article>
+          <article class="articlepad">
             <header>
               <img src="img/happiness.png" alt="Happy">
             </header>
@@ -132,29 +153,33 @@
             <p>Experience happiness first hand. Triggers dopamine receptors. WARNING: Can be addictive. Use with  caution.</p>
             <form>
               <fieldset>
-                <!-- <legend>Colours</legend>
-                <ul>
-                  <li><label><input type="radio" name="colour" value="r"> Red</label></li>
-                  <li><label><input type="radio" name="colour" value="w"> White</label></li>
-                  <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
-                </ul>
-              </fieldset> -->
-
-              <fieldset>
-                <legend>Sizes</legend>
-                <ol>
-                  <li><label><input type="radio" name="size" value="po"> Pocket</label></li>
-                  <li><label><input type="radio" name="size" value="sm"> Small</label></li>
-                  <li><label><input type="radio" name="size" value="lg"> Large</label></li>
-                </ol>
-              </fieldset>
+                  <fieldset>
+                      <ul class="options">
+                        <li>
+                          <label class="option">
+                            <input type="radio" name="sizee" value="p" checked> <!-- default -->
+                            <span class="circle">P</span>
+                          </label>
+                        </li>
+                    
+                        <li>
+                          <label class="option">
+                            <input type="radio" name="sizee" value="s">
+                            <span class="circle">S</span>
+                          </label>
+                        </li>
+                    
+                        <li>
+                          <label class="option">
+                            <input type="radio" name="sizee" value="l"> 
+                            <span class="circle">L</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </fieldset>
 
               <footer>
-                <dl>
-                  <dt>Rating</dt>
-                  <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-                </dl>
-                <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
+                <data value="39"> <ins>$28.00</ins></data>
                 <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
                 <button type="button"><span class="material-icons">favorite</span></button>
                 <a href="#">see more</a>
@@ -163,75 +188,82 @@
           </article>
 
           <!-- Calm -->
-          <article>
+          <article class="articlepad">
             <header>
               <img src="img/calm.png" alt="Calm Product Image">
             </header>
             <h3>Calm</h3>
             <p>Experience calm like never before. Can help with sleep. WARNING: Not recommended over extended periods of time.</p>
             <form>
-              <!-- <fieldset>
-                <legend>Colours</legend>
-                <ul>
-                  <li><label><input type="radio" name="colour" value="r"> Red</label></li>
-                  <li><label><input type="radio" name="colour" value="w"> White</label></li>
-                  <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
-                </ul>
-              </fieldset> -->
-
-              <fieldset>
-                <legend>Sizes</legend>
-                <ol>
-                  <li><label><input type="radio" name="size" value="po"> Pocket</label></li>
-                  <li><label><input type="radio" name="size" value="sm"> Small</label></li>
-                  <li><label><input type="radio" name="size" value="lg"> Large</label></li>
-                </ol>
-              </fieldset>
+                <fieldset>
+                    <ul class="options">
+                      <li>
+                        <label class="option">
+                          <input type="radio" name="sizee" value="p" checked> <!-- default -->
+                          <span class="circle">P</span>
+                        </label>
+                      </li>
+                  
+                      <li>
+                        <label class="option">
+                          <input type="radio" name="sizee" value="s">
+                          <span class="circle">S</span>
+                        </label>
+                      </li>
+                  
+                      <li>
+                        <label class="option">
+                          <input type="radio" name="sizee" value="l"> 
+                          <span class="circle">L</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </fieldset>
 
               <footer>
-                <dl>
-                  <dt>Rating</dt>
-                  <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-                </dl>
-                <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
-                <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
-                <button type="button"><span class="material-icons">favorite</span></button>
-                <a href="#">see more</a>
-              </footer>
+                <footer>
+                  <data value="39"> <ins>$28.00</ins></data>
+                  <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
+                  <button type="button"><span class="material-icons">favorite</span></button>
+                  <a href="#">see more</a>
+                </footer>
             </form>
           </article>
 
           <!-- Love -->
-          <article>
+          <article class="articlepad">
             <header>
               <img src="img/Passion.png" alt="Love Product Image">
             </header>
             <h3>Love</h3>
             <p>Find your spark and love with passion.Triggers dopamine receptors. WARNING: Can be addictive. Use with  caution.</p>
             <form>
-              <!-- <fieldset>
-                <legend>Colours</legend>
-                <ul>
-                  <li><label><input type="radio" name="colour" value="r"> Red</label></li>
-                  <li><label><input type="radio" name="colour" value="w"> White</label></li>
-                  <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
-                </ul>
-              </fieldset> -->
-
-              <fieldset>
-                <legend>Sizes</legend>
-                <ol>
-                  <li><label><input type="radio" name="size" value="po"> Pocket</label></li>
-                  <li><label><input type="radio" name="size" value="sm"> Small</label></li>
-                  <li><label><input type="radio" name="size" value="lg"> Large</label></li>
-                </ol>
-              </fieldset>
+                <fieldset>
+                    <ul class="options">
+                      <li>
+                        <label class="option">
+                          <input type="radio" name="sizee" value="p" checked> <!-- default -->
+                          <span class="circle">P</span>
+                        </label>
+                      </li>
+                  
+                      <li>
+                        <label class="option">
+                          <input type="radio" name="sizee" value="s">
+                          <span class="circle">S</span>
+                        </label>
+                      </li>
+                  
+                      <li>
+                        <label class="option">
+                          <input type="radio" name="sizee" value="l"> 
+                          <span class="circle">L</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </fieldset>
 
               <footer>
-                <dl>
-                  <dt>Rating</dt>
-                  <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-                </dl>
                 <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
                 <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
                 <button type="button"><span class="material-icons">favorite</span></button>
@@ -241,37 +273,40 @@
           </article>
     
           <!-- Focus -->
-          <article>
+          <article class="articlepad">
             <header>
               <img src="img/focus.png" alt="Focus Product Image">
             </header>
             <h3>Focus</h3>
             <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
             <form>
-              <!-- <fieldset>
-                <legend>Colours</legend>
-                <ul>
-                  <li><label><input type="radio" name="colour" value="r"> Red</label></li>
-                  <li><label><input type="radio" name="colour" value="w"> White</label></li>
-                  <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
-                </ul>
-              </fieldset> -->
-
-              <fieldset>
-                <legend>Sizes</legend>
-                <ol>
-                  <li><label><input type="radio" name="size" value="po"> Pocket</label></li>
-                  <li><label><input type="radio" name="size" value="sm"> Small</label></li>
-                  <li><label><input type="radio" name="size" value="lg"> Large</label></li>
-                </ol>
-              </fieldset>
+                <fieldset>
+                    <ul class="options">
+                      <li>
+                        <label class="option">
+                          <input type="radio" name="sizee" value="p" checked> <!-- default -->
+                          <span class="circle">P</span>
+                        </label>
+                      </li>
+                  
+                      <li>
+                        <label class="option">
+                          <input type="radio" name="sizee" value="s">
+                          <span class="circle">S</span>
+                        </label>
+                      </li>
+                  
+                      <li>
+                        <label class="option">
+                          <input type="radio" name="sizee" value="l"> 
+                          <span class="circle">L</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </fieldset>
 
               <footer>
-                <dl>
-                  <dt>Rating</dt>
-                  <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-                </dl>
-                <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
+                <data value="39"> <ins>$28.00</ins></data>
                 <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
                 <button type="button"><span class="material-icons">favorite</span></button>
                 <a href="#">see more</a>
@@ -280,37 +315,40 @@
           </article>
 
           <!-- Angry -->
-          <article>
+          <article class="articlepad">
             <header>
               <img src="img/anger.png" alt="Product Image">
             </header>
             <h3>Angry</h3>
             <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
             <form>
-              <!-- <fieldset>
-                <legend>Colours</legend>
-                <ul>
-                  <li><label><input type="radio" name="colour" value="r"> Red</label></li>
-                  <li><label><input type="radio" name="colour" value="w"> White</label></li>
-                  <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
-                </ul>
-              </fieldset> -->
-
-              <fieldset>
-                <legend>Sizes</legend>
-                <ol>
-                  <li><label><input type="radio" name="size" value="po"> Pocket</label></li>
-                  <li><label><input type="radio" name="size" value="sm"> Small</label></li>
-                  <li><label><input type="radio" name="size" value="lg"> Large</label></li>
-                </ol>
-              </fieldset>
+                <fieldset>
+                    <ul class="options">
+                      <li>
+                        <label class="option">
+                          <input type="radio" name="sizee" value="p" checked> <!-- default -->
+                          <span class="circle">P</span>
+                        </label>
+                      </li>
+                  
+                      <li>
+                        <label class="option">
+                          <input type="radio" name="sizee" value="s">
+                          <span class="circle">S</span>
+                        </label>
+                      </li>
+                  
+                      <li>
+                        <label class="option">
+                          <input type="radio" name="sizee" value="l"> 
+                          <span class="circle">L</span>
+                        </label>
+                      </li>
+                    </ul>
+                  </fieldset>
 
               <footer>
-                <dl>
-                  <dt>Rating</dt>
-                  <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-                </dl>
-                <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
+                <data value="39"> <ins>$28.00</ins></data>
                 <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
                 <button type="button"><span class="material-icons">favorite</span></button>
                 <a href="#">see more</a>
@@ -319,37 +357,40 @@
           </article>
 
          <!-- Sad -->
-          <article>
+          <article class="articlepad">
                       <header>
                         <img src="img/Sadness.png" alt="Product Image">
                       </header>
-                      <h3>Sad</h3>
-                      <p>Here is a shot of this product that might entice a user to click and add it to their cart.</p>
+                      <h3>Grief</h3>
+                      <p>Experience shick, disbelief, and emptiness. WARNING: sad emotions have the potential to trigger extreme emotions. Use with caution. </p>
                       <form>
-                        <!-- <fieldset>
-                          <legend>Colours</legend>
-                          <ul>
-                            <li><label><input type="radio" name="colour" value="r"> Red</label></li>
-                            <li><label><input type="radio" name="colour" value="w"> White</label></li>
-                            <li><label><input type="radio" name="colour" value="b"> Blue</label></li>
-                          </ul>
-                        </fieldset> -->
-          
-                        <fieldset>
-                          <legend>Sizes</legend>
-                          <ol>
-                            <li><label><input type="radio" name="size" value="m"> M</label></li>
-                            <li><label><input type="radio" name="size" value="l"> L</label></li>
-                            <li><label><input type="radio" name="size" value="xl"> XL</label></li>
-                          </ol>
-                        </fieldset>
+                          <fieldset>
+                              <ul class="options">
+                                <li>
+                                  <label class="option">
+                                    <input type="radio" name="sizee" value="p" checked> <!-- default -->
+                                    <span class="circle">P</span>
+                                  </label>
+                                </li>
+                            
+                                <li>
+                                  <label class="option">
+                                    <input type="radio" name="sizee" value="s">
+                                    <span class="circle">S</span>
+                                  </label>
+                                </li>
+                            
+                                <li>
+                                  <label class="option">
+                                    <input type="radio" name="sizee" value="l"> 
+                                    <span class="circle">L</span>
+                                  </label>
+                                </li>
+                              </ul>
+                            </fieldset>
           
                         <footer>
-                          <dl>
-                            <dt>Rating</dt>
-                            <dd>4.4 <span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star</span><span class="material-icons">star_half</span></dd>
-                          </dl>
-                          <data value="39"><del>$50.00</del> <ins>$39.00</ins></data>
+                          <data value="39"> <ins>$28.00</ins></data>
                           <button type="button"><span class="material-icons">add_shopping_cart</span> Add to Cart</button>
                           <button type="button"><span class="material-icons">favorite</span></button>
                           <a href="#">see more</a>
@@ -371,7 +412,7 @@
       </section>
     </main>
 
-    <footer class="footerdetails">
+    <footer class="foot">
       <p>&copy; Copyright, 1991.</p>
       <nav aria-label="Legal">
         <ul class="submenu">

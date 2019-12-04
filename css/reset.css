@@ -12,8 +12,9 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
   padding: 0;
   border: 0;
   font-size: 1em;
-  font-weight: inherit;
+  font-weight: 3em;
   font-style: inherit;
+  font-family: 'Unna', serif;
   vertical-align: baseline;
   background: transparent;
 }
@@ -50,14 +51,14 @@ ul {
   list-style-type: none;
 }
 ol {
-  list-style-type: decimal;
+  list-style-type: none;
 }
-ul.bullets, ol {
+/* ul.bullets, ol {
   padding-left: 4em;
 }
 ul.bullets ul, ul ol, ol ol {
   padding-left: 2em;
-}
+} */
 
 blockquote, q {
   quotes: "“" "”" "‘" "’";
